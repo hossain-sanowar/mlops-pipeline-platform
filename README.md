@@ -1,9 +1,58 @@
 # mlops-pipeline-platform
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Docker](https://img.shields.io/badge/Docker-Enabled-blue)
+![MLOps](https://img.shields.io/badge/MLOps-Production-green)
 
 ---
 
 # `Mlops-pipeline-platform`
+
+# 🚀 MLOps & AI Portfolio
+
+This repository serves as a central hub for my Machine Learning, MLOps, and AI projects.
+
+---
+
+## 📂 Featured Projects
+
+### ⚙️ MLOps & Production Pipelines
+- 🔹 [MLOps Pipeline Platform](https://github.com/hossain-sanowar/mlops-pipeline-platform)  
+  End-to-end ML pipeline with MLflow, DVC, Docker, Kubernetes, CI/CD, Prometheus, Grafana (PyTorch, TensorFlow, Scikit-learn, AWS, GCP)
+
+- 🔹 [NLP Sentiment MLOps Pipeline](https://github.com/hossain-sanowar/nlp-sentiment-mlops-pipeline)  
+  Production NLP pipeline with MLflow, DVC, Docker, Kubernetes, CI/CD (GitHub Actions, Jenkins), monitoring with Prometheus & Grafana
+
+---
+
+### 🏭 Machine Learning Systems
+- 🔹 [Consignment Product Prediction](https://github.com/hossain-sanowar/Consignment-Product-Prediction)  
+  End-to-end ML system with ETL pipelines, Airflow, DVC, Docker, AWS (S3, EC2), Hadoop, TensorFlow, and web UI
+
+- 🔹 [Kidney Disease Classification](https://github.com/hossain-sanowar/end-end-Kidney_Disease_Classification)  
+  ML pipeline with DVC, CI/CD on AWS, and user-facing application for medical prediction
+
+---
+
+### 🤖 LLM & Generative AI Systems
+- 🔹 [Flipkart LLM Production System](https://github.com/hossain-sanowar/llm_flipkart_production)  
+  RAG-based LLM system using Groq, HuggingFace, LangChain, AstraDB with Docker, Kubernetes, and monitoring stack
+
+- 🔹 [AI Study Agent](https://github.com/hossain-sanowar/llm_aiStudy_agent)  
+  Multi-agent LLM system with LangChain, Groq, Kubernetes, Jenkins, WebHooks, and scalable API deployment
+
+- 🔹 [AI Music Composer](https://github.com/hossain-sanowar/llm_AImusic_composer)  
+  AI-powered music generation system using Music21, Groq, LangChain with Docker, Kubernetes (GKE), and cloud deployment
+
+---
+
+## 🎯 Key Skills Demonstrated
+- MLOps (CI/CD, Docker, Kubernetes)
+- LLM Systems (RAG, Agents, LangChain)
+- End-to-End ML Pipelines
+- Production Deployment
+
+---
 
 ## Folder Structure
 ```text
