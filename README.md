@@ -1,16 +1,17 @@
 # 🚀 MLOps & AI Portfolio
-💼 Focused on building scalable AI systems for real-world applications.
+
+Production-grade ML systems focused on real-world deployment, automation, and scalability.
+
+⭐ Building production-ready AI systems | Open to ML / MLOps roles  
+
+💼 Focused on building scalable AI systems for real-world production environments.
+
+---
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Docker](https://img.shields.io/badge/Docker-Enabled-blue)
 ![MLOps](https://img.shields.io/badge/MLOps-Production-green)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestrated-blue)
-
----
-
-<!-- # `Mlops-pipeline-platform` -->
-
-Production-grade Machine Learning, MLOps, and LLM systems focused on **scalability, automation, and real-world deployment**.
 
 <!-- ---
 ## 📸 Demo
@@ -21,7 +22,7 @@ with 1–2 images per project
 
 ## 💡 Highlights
 
-- Built scalable ML pipelines with **CI/CD, Docker, Kubernetes**
+- Designed and deployed scalable ML pipelines using **CI/CD, Docker, and Kubernetes**
 - Developed LLM systems using **RAG and multi-agent architectures**
 - Deployed production systems on **AWS & GCP**
 - Implemented monitoring with **Prometheus & Grafana**
@@ -54,34 +55,33 @@ with 1–2 images per project
 
 ### 🏭 Machine Learning Systems
 
-- [Consignment Product Prediction](https://github.com/hossain-sanowar/Consignment-Product-Prediction)
+- [Consignment Product Prediction](https://github.com/hossain-sanowar/Consignment-Product-Prediction)  
   End-to-end ML system with ETL pipelines, Airflow, DVC, Docker, AWS (S3, EC2), Hadoop, TensorFlow, and web UI
 
-- [Kidney Disease Classification](https://github.com/hossain-sanowar/end-end-Kidney_Disease_Classification)
+- [Kidney Disease Classification](https://github.com/hossain-sanowar/end-end-Kidney_Disease_Classification)  
   ML pipeline with DVC, CI/CD on AWS, and user-facing application for healthcare prediction
 
 ---
 
 ### 🤖 LLM & Generative AI Systems
 
-- [Flipkart LLM Production System](https://github.com/hossain-sanowar/llm_flipkart_production)
+- [Flipkart LLM Production System](https://github.com/hossain-sanowar/llm_flipkart_production)  
   RAG-based LLM system using Groq, HuggingFace, LangChain, AstraDB with Docker, Kubernetes, and monitoring
 
-- [AI Study Agent](https://github.com/hossain-sanowar/llm_aiStudy_agent)
+- [AI Study Agent](https://github.com/hossain-sanowar/llm_aiStudy_agent)  
   Multi-agent LLM system with LangChain, Groq, Kubernetes, Jenkins, WebHooks, and scalable API deployment
 
-- [AI Music Composer](https://github.com/hossain-sanowar/llm_AImusic_composer)
+- [AI Music Composer](https://github.com/hossain-sanowar/llm_AImusic_composer)  
   AI-powered music generation using Music21, Groq, LangChain with Docker, Kubernetes (GKE), and cloud deployment
 
 ---
 
 ## 📘 Machine Learning Foundations
 
-- [Machine Learning Projects](https://github.com/hossain-sanowar/Machine-Learning-Projects)
-  Collection of core ML algorithms including regression, classification, clustering, and ensemble methods
-  *(Linear Regression, SVM, KNN, Random Forest, XGBoost)*
+- [Machine Learning Projects](https://github.com/hossain-sanowar/Machine-Learning-Projects)  
+  Collection of core ML algorithms including regression, classification, clustering, and ensemble methods  
+  *(Linear Regression, SVM, KNN, Random Forest, XGBoost)*  
   *Represents foundational work and early exploration in machine learning.*
-
 
 ---
 
@@ -144,7 +144,7 @@ This project demonstrates a production-style MLOps workflow for training, evalua
 - Jenkins
 - GitHub Actions
 
-## 📁 Project Structure
+## 📂 Code Structure
 - `src/` modular pipeline steps
 - `dvc.yaml` pipeline orchestration
 - `params.yaml` configurable parameters
@@ -155,7 +155,6 @@ This project demonstrates a production-style MLOps workflow for training, evalua
 ```bash
 git clone https://github.com/hossain-sanowar/mlops-pipeline-platform
 cd mlops-pipeline-platform
-pip install -r requirements.txt
 pip install -e .
 python src/train.py
 ```
@@ -174,9 +173,9 @@ Designed as a reference implementation for reproducible and production-grade ML 
 ---
 ## 📊 Impact
 
-- Automated ML pipeline reduced manual effort by ~80%
+- Reduced manual ML workflow effort by ~80% through automation
 - Enabled reproducible experiments using MLflow & DVC
-- Designed scalable deployment using Docker & Kubernetes
+- Designed scalable deployments using Docker & Kubernetes
 
 
 ---
