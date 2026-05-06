@@ -45,8 +45,9 @@ with 1–2 images per project
 ### ⚙️ MLOps & Production Pipelines
 
 - [MLOps Pipeline Platform](https://github.com/hossain-sanowar/mlops-pipeline-platform)  
-  Reproducible ML pipeline with MLflow, DVC, Docker, Kubernetes, CI/CD, and monitoring (PyTorch, TensorFlow, AWS, GCP
-- [NLP Sentiment MLOps Pipeline](https://github.com/hossain-sanowar/nlp-sentiment-mlops-pipeline)
+  Reproducible ML pipeline with MLflow, DVC, Docker, Kubernetes, CI/CD, and monitoring (PyTorch, TensorFlow, AWS, GCP)
+
+- [NLP Sentiment MLOps Pipeline](https://github.com/hossain-sanowar/nlp-sentiment-mlops-pipeline)  
   Production NLP system with automated pipelines, CI/CD (GitHub Actions, Jenkins), and monitoring stack
 
 ---
