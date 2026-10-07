@@ -1,193 +1,76 @@
-# 🚀 MLOps & AI Portfolio
+# MLOps Pipeline Platform
 
-Production-grade ML systems focused on real-world deployment, automation, and scalability.
-
-⭐ Building production-ready AI systems | Open to ML / MLOps roles  
-
-💼 Focused on building scalable AI systems for real-world production environments.
-
----
+A reproducible machine-learning pipeline: data versioning and pipeline stages with **DVC**, experiment tracking with **MLflow**, packaging with **Docker**, and CI with **GitHub Actions** and **Jenkins**.
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Docker](https://img.shields.io/badge/Docker-Enabled-blue)
-![MLOps](https://img.shields.io/badge/MLOps-Production-green)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestrated-blue)
-
-<!-- ---
-## 📸 Demo
-with 1–2 images per project
- -->
+![DVC](https://img.shields.io/badge/DVC-pipeline-945DD6)
+![MLflow](https://img.shields.io/badge/MLflow-tracking-0194E2)
+![Docker](https://img.shields.io/badge/Docker-container-2496ED)
 
 ---
 
-## 💡 Highlights
+## What it does
 
-- Designed and deployed scalable ML pipelines using **CI/CD, Docker, and Kubernetes**
-- Developed LLM systems using **RAG and multi-agent architectures**
-- Deployed production systems on **AWS & GCP**
-- Implemented monitoring with **Prometheus & Grafana**
-- Designed **end-to-end ML lifecycle systems** (data → training → deployment)
-
----
-
-## 🛠️ Key Skills Demonstrated
-
-- **MLOps:** CI/CD, Docker, Kubernetes, MLflow, DVC
-- **Machine Learning:** End-to-end pipelines, model training, evaluation
-- **LLM Systems:** RAG, Agents, LangChain, Vector Databases
-- **Cloud:** AWS, GCP
-- **Monitoring:** Prometheus, Grafana
-- **Backend & APIs:** Flask, FastAPI
-
----
-
-## 📂 Featured Projects
-
-### ⚙️ MLOps & Production Pipelines
-
-- [MLOps Pipeline Platform](https://github.com/hossain-sanowar/mlops-pipeline-platform)  
-  Reproducible ML pipeline with MLflow, DVC, Docker, Kubernetes, CI/CD, and monitoring (PyTorch, TensorFlow, AWS, GCP)
-
-- [NLP Sentiment MLOps Pipeline](https://github.com/hossain-sanowar/nlp-sentiment-mlops-pipeline)  
-  Production NLP system with automated pipelines, CI/CD (GitHub Actions, Jenkins), and monitoring stack
-
----
-
-### 🏭 Machine Learning Systems
-
-- [Consignment Product Prediction](https://github.com/hossain-sanowar/Consignment-Product-Prediction)  
-  End-to-end ML system with ETL pipelines, Airflow, DVC, Docker, AWS (S3, EC2), Hadoop, TensorFlow, and web UI
-
-- [Kidney Disease Classification](https://github.com/hossain-sanowar/end-end-Kidney_Disease_Classification)  
-  ML pipeline with DVC, CI/CD on AWS, and user-facing application for healthcare prediction
-
----
-
-### 🤖 LLM & Generative AI Systems
-
-- [Flipkart LLM Production System](https://github.com/hossain-sanowar/llm_flipkart_production)  
-  RAG-based LLM system using Groq, HuggingFace, LangChain, AstraDB with Docker, Kubernetes, and monitoring
-
-- [AI Study Agent](https://github.com/hossain-sanowar/llm_aiStudy_agent)  
-  Multi-agent LLM system with LangChain, Groq, Kubernetes, Jenkins, WebHooks, and scalable API deployment
-
-- [AI Music Composer](https://github.com/hossain-sanowar/llm_AImusic_composer)  
-  AI-powered music generation using Music21, Groq, LangChain with Docker, Kubernetes (GKE), and cloud deployment
-
----
-
-## 📘 Machine Learning Foundations
-
-- [Machine Learning Projects](https://github.com/hossain-sanowar/Machine-Learning-Projects)  
-  Collection of core ML algorithms including regression, classification, clustering, and ensemble methods  
-  *(Linear Regression, SVM, KNN, Random Forest, XGBoost)*  
-  *Represents foundational work and early exploration in machine learning.*
-
----
-
-## 🏗️ Architecture
-
-This architecture represents an end-to-end MLOps pipeline integrating data versioning, experiment tracking, CI/CD automation, and containerized deployment.
-
-![MLOps Architecture](docs/mlops_architecture.png)
-
----
-
-## 📁 Project Structure
-```text
-mlops-pipeline-platform/
-├── README.md
-├── requirements.txt
-├── Dockerfile
-├── .gitignore
-├── src/
-│   ├── data_ingestion.py
-│   ├── train.py
-│   ├── evaluate.py
-│   ├── predict.py
-│   └── config.py
-├── notebooks/
-│   └── experiments.ipynb
-├── dvc.yaml
-├── params.yaml
-├── mlruns/
-├── tests/
-│   └── test_pipeline.py
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-└── jenkins/
-    └── Jenkinsfile
 ```
-## 🧱 Core Project: MLOps Pipeline Platform
+data_ingestion → train → evaluate → (MLflow tracks params, metrics, models)
+        ▲                    │
+   params.yaml          dvc.yaml stages, re-run only what changed
+```
 
-A reproducible end-to-end MLOps pipeline with experiment tracking, data versioning, CI/CD automation, and containerized deployment.
+- **One command runs the whole pipeline:** `dvc repro`
+- **Every run is tracked:** parameters, metrics and model artefacts are logged to MLflow, so runs can be compared and reproduced
+- **Configuration in one place:** hyper-parameters live in `params.yaml`; changing a value re-runs only the affected stages
+- **Tested and built automatically:** CI runs the tests on every push (GitHub Actions; an equivalent Jenkins pipeline is in `jenkins/`)
+- **Containerised:** the `Dockerfile` packages the pipeline and prediction code into one image
 
-## 📖 Overview
+## Tech stack
 
-This project demonstrates a production-style MLOps workflow for training, evaluating, versioning, and deploying machine learning models using modern infrastructure and automation tooling.
+Python · DVC · MLflow · Docker · GitHub Actions · Jenkins · pytest
 
-## ⚡ Features
-- Experiment tracking with MLflow
-- Data and pipeline versioning with DVC
-- Automated CI/CD workflows
-- Dockerized model packaging
-- Kubernetes-ready deployment
-- Modular training and evaluation pipeline
+## Project structure
 
-## 🧰 Tech Stack
-- Python
-- MLflow
-- DVC
-- Docker
-- Kubernetes
-- Jenkins
-- GitHub Actions
+```
+mlops-pipeline-platform/
+├── src/
+│   ├── data_ingestion.py    # load and split data
+│   ├── train.py             # train model, log to MLflow
+│   ├── evaluate.py          # compute metrics, log to MLflow
+│   ├── predict.py           # inference
+│   └── config.py
+├── dvc.yaml                 # pipeline stages
+├── params.yaml              # hyper-parameters
+├── tests/test_pipeline.py
+├── notebooks/experiments.ipynb
+├── Dockerfile
+├── .github/workflows/ci.yml
+└── jenkins/Jenkinsfile
+```
 
-## 📂 Code Structure
-- `src/` modular pipeline steps
-- `dvc.yaml` pipeline orchestration
-- `params.yaml` configurable parameters
-- `.github/workflows/` CI workflow
-- `jenkins/` Jenkins pipeline config
+## Run locally
 
-## Run Locally
 ```bash
 git clone https://github.com/hossain-sanowar/mlops-pipeline-platform
 cd mlops-pipeline-platform
-pip install -e .
-python src/train.py
+pip install -r requirements.txt
+
+dvc repro          # run the full pipeline
+mlflow ui          # open http://localhost:5000 to compare runs
+pytest tests/      # run the tests
 ```
----
-## 🔄 Pipeline
 
-- Data Ingestion  
-- Data Preprocessing  
-- Model Training  
-- Model Evaluation  
-- Experiment Tracking (MLflow)  
-- Packaging & Deployment  
+Run with Docker:
 
-Designed as a reference implementation for reproducible and production-grade ML workflows.
+```bash
+docker build -t mlops-pipeline .
+docker run --rm mlops-pipeline
+```
 
----
-## 📊 Impact
+## Next steps
 
-- One command (dvc repro) runs the whole pipeline
-- Enabled reproducible experiments using MLflow & DVC
-- Designed scalable deployments using Docker & Kubernetes
-
+- Serve `predict.py` behind a small REST API
+- Deploy the container to Kubernetes with a Helm chart
+- Add Prometheus metrics for latency and prediction counts
 
 ---
 
-## 🎯 Use Case
-
-This project demonstrates how to design, build, and deploy scalable ML systems using modern MLOps practices, making it suitable for real-world production environments.
-
----
-
-## 👨‍💻 Author
-
-**Md Sanowar Hossain**  
-Machine Learning Engineer | MLOps | Applied AI  
-
+**Author:** Md Sanowar Hossain · [LinkedIn](https://www.linkedin.com/in/HossainSanowar) · [GitHub](https://github.com/hossain-sanowar)
