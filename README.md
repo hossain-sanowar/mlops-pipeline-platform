@@ -173,7 +173,7 @@ Designed as a reference implementation for reproducible and production-grade ML 
 ---
 ## 📊 Impact
 
-- Reduced manual ML workflow effort by ~80% through automation
+- One command (dvc repro) runs the whole pipeline
 - Enabled reproducible experiments using MLflow & DVC
 - Designed scalable deployments using Docker & Kubernetes
 
